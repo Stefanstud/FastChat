@@ -2059,6 +2059,30 @@ register_conv_template(
     )
 )
 
+# Phi-3-mini
+# reference: https://huggingface.co/microsoft/Phi-3-mini-4k-instruct
+register_conv_template(
+    Conversation(
+        name="phi-3",
+        system_message="",
+        roles=("user", "assistant"),
+        sep_style=SeparatorStyle.ADD_NEW_LINE_SINGLE,
+        sep="<end>",
+    )
+)
+
+# Phi-3-mini
+# reference: https://huggingface.co/microsoft/Phi-3-mini-4k-instruct
+register_conv_template(
+    Conversation(
+        name="phi-3-dpo",
+        system_message="",
+        roles=("user", "assistant"),
+        sep_style=SeparatorStyle.ADD_NEW_LINE_SINGLE,
+        sep="<end>",
+    )
+)
+
 
 if __name__ == "__main__":
     from fastchat.conversation import get_conv_template
